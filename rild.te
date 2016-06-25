@@ -5,6 +5,8 @@ r_dir_file(rild, sysfs_ssr)
 
 r_dir_file(rild, netmgrd)
 
+binder_call(rild, mediaserver)
+
 #Allow access to netmgrd socket
 netmgr_socket(rild);
 
