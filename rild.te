@@ -1,11 +1,13 @@
-qmux_socket(rild);
+binder_call(rild, mediaserver)
 binder_use(rild)
+binder_service(rild)
+
+qmux_socket(rild);
+
 
 r_dir_file(rild, sysfs_ssr)
 
 r_dir_file(rild, netmgrd)
-
-binder_call(rild, mediaserver)
 
 #Allow access to netmgrd socket
 netmgr_socket(rild);
